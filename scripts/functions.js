@@ -1,6 +1,16 @@
 import { globlas } from "./globals.js";
 import { User } from "./models/user.model.js";
 
+/**
+ * The `login` function handles user login functionality by checking the entered username and password
+ * against stored user data in localStorage and redirecting to the main page if the credentials are
+ * correct.
+ * @param event - The `event` parameter in the `login` function is an event object that represents the
+ * event that is being handled, in this case, it is used to prevent the default behavior of form
+ * submission when the login form is submitted. By calling `event.preventDefault()`, the default form
+ * submission behavior is prevented
+ * @return quits from the function after recieving wrong value
+ */
 export function login(event) {
     event.preventDefault();
     let username = document.querySelector(`#username`).value;
@@ -39,6 +49,9 @@ export function login(event) {
     }
 }
 
+/**
+ * The function `addHeader` add a navigation menu in the header of a webpage.
+ */
 export function addHeader() {
     let header = `<button id="openAndCloseNav"></button>
         <nav>
@@ -58,6 +71,15 @@ export function addHeader() {
     headerElement.innerHTML = header;
 }
 
+/**
+ * The `register` function handles user registration by checking for existing usernames,
+ * creating new users, and storing user data in local storage.
+ * @param event - The `event` parameter in the `register` function is an event object that represents
+ * the event that is being handled, such as a form submission. In this case, the function is used to
+ * handle the registration process on a website, where the event is likely a form submission event
+ * triggered by the user
+ * @return quits from the function after recieving wrong value
+ */
 export function register(event) {
     event.preventDefault();
     let userCreated = false;
@@ -95,6 +117,14 @@ export function register(event) {
     }
 }
 
+/**
+ * The function `openAndCloseNav` toggles the display of a navigation element and changes the
+ * background image of a button accordingly.
+ * @param event - The `event` parameter in the `openAndCloseNav` function is an event object that
+ * represents the event that triggered the function, such as a click event on a button. It is commonly
+ * used to prevent the default behavior of an event, access the target element that triggered the
+ * event, and perform
+ */
 export function openAndCloseNav(event) {
     event.preventDefault();
     let btn = event.target;
@@ -110,6 +140,15 @@ export function openAndCloseNav(event) {
         btn.style.backgroundImage = `url(${closeSrc})`;
     }
 }
+
+/**
+ * The `openRegisterForm` function prevents the default event, hides the login form, and displays the
+ * registration form.
+ * @param event - The `event` parameter is an event object that is passed to the `openRegisterForm`
+ * function when it is called. It is typically an event that triggers the function, such as a click
+ * event on a button or a form submission event. In this case, the function is preventing the default
+ * behavior
+ */
 export function openRegisterForm(event) {
     event.preventDefault();
     let regForm = document.querySelector(`#registration`);
@@ -117,6 +156,7 @@ export function openRegisterForm(event) {
     loginForm.style.display = `none`;
     regForm.style.display = `grid`;
 }
+
 //landing page
 /**
  * The function `setTimer` calculates the time left until a specified date and time and displays it in
@@ -152,6 +192,7 @@ export function setTimer(year, month, day, hour, min, sec) {
     else
         timerElement.innerHTML = `${days}D:${hours}H:${minutes}M:${seconds}S`
 }
+
 /**
  * The `btnsLandingPage` function handles button click events on a landing page, redirecting to a
  * specific URL or displaying a pop-up message based on the clicked button's ID.
@@ -203,13 +244,15 @@ export function btnsLandingPage(event) {
 }
 
 //editors
+
+//calls functions for bannerEditor page
 export function bannerEditor() {
     setBannerStyle();
     updateElement();
     addFontsAndSizes();
     bannerEvenetListeners();
 }
-
+//calls functions for landing page and newsletter pages
 export function landingPageAndNewsletterEditor() {
     addFontsAndSizes();
     chooseStyle();
@@ -217,6 +260,11 @@ export function landingPageAndNewsletterEditor() {
     setLPandNLeditorsEventListeners();
 }
 
+/**
+ * The function `setLPandNLeditorsEventListeners` sets event listeners for various elements on the page
+ * for handling color changes, image additions, text editing, saving changes, and resetting to default
+ * values.
+ */
 function setLPandNLeditorsEventListeners() {
     let clrs = document.querySelector(`#clrs`);
     clrs.addEventListener(`change`, changeElementClr);
@@ -235,7 +283,8 @@ function setLPandNLeditorsEventListeners() {
     let restoreBtn = document.querySelector(`#resetToDefaults`);
     restoreBtn.addEventListener(`click`, resetToDefaults);
 }
-//html templates
+
+//the function stores and returns the needed html element
 function getHtmlTemplate(templateNumber) {
     let template1;
     let template2;
@@ -427,7 +476,8 @@ function getHtmlTemplate(templateNumber) {
         return template1;
     }
 }
-//style templates
+
+//the function stores and returns the needed stlye properties
 function getStyleTemplate() {
     let template;
     if (window.location.href.includes(`landing`)) {
@@ -818,6 +868,7 @@ ul li {
     return template;
 }
 
+//changes icon in table element of landing page
 function changeIcon(event) {
     let input = event.target;
     let select = document.querySelector(`#icon`);
@@ -837,6 +888,13 @@ function changeIcon(event) {
 }
 
 
+/**
+ * The function `editText` handles editing text content and styling properties based on the event
+ * target and the current URL.
+ * @param event - The `event` parameter in the `editText` function represents the event that triggered
+ * the function, such as a keyup event or a change event. It contains information about the event, such
+ * as the target element that triggered the event and any associated data.
+ */
 function editText(event) {
     event.preventDefault();
     if (window.location.href.includes(`banner`)) {
@@ -900,6 +958,10 @@ function editText(event) {
     }
 }
 
+/**
+ * The function `chooseStyle` dynamically updates the webpage's style and content based on the URL and
+ * user interactions.
+ */
 function chooseStyle() {
     let section = document.createElement(`section`);
     section.id = `wrapper`;
@@ -936,6 +998,10 @@ function chooseStyle() {
     setLPandNLeditorsEventListeners();
 }
 
+/**
+ * The function `bannerEvenetListeners` adds event listeners to various input elements based on their
+ * type and id.
+ */
 function bannerEvenetListeners() {
     let inputs = document.querySelectorAll(`#tools input, #tools select, #tools button, #saver button`);
     inputs.forEach(input => {
@@ -972,6 +1038,7 @@ function bannerEvenetListeners() {
             input.addEventListener(`change`, setFontFamily);
     });
 }
+
 /**
  * The function `setbannerSize` takes an event input, extracts width and height values from a string,
  * and sets the width and height of a banner element accordingly.
@@ -1019,6 +1086,14 @@ function getImgId(input) {
     else return `#img${identifier}`;
 }
 
+/**
+ * The function `setFontFamily` sets the font family of a paragraph element based on the value of an
+ * input element if the current URL includes the word "banner".
+ * @param event - The `event` parameter is an object that represents an event that occurs in the DOM,
+ * such as a user action like clicking a button or submitting a form. In this context, it is likely
+ * referring to an event that is triggered when a user interacts with an input element, such as typing
+ * in a
+ */
 function setFontFamily(event) {
     let input = event.target;
     let value = input.value;
@@ -1424,11 +1499,7 @@ function downloadAsCode(event) {
         element.style.width = `100%`;
     }
     let htmlContent = element.outerHTML;
-    let css = getCss(element);
-    element.querySelectorAll(`*`).forEach(element => {
-        css += getCss(element);
-    });
-    let completePage = makeHtmlElement(htmlContent, css);
+    let completePage = makeHtmlElement(htmlContent);
     let blob = new Blob([completePage], { type: 'text/html' });
     let link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -1436,7 +1507,21 @@ function downloadAsCode(event) {
     link.click();
 }
 
-function makeHtmlElement(htmlContent, css) {
+
+/**
+ * The function `makeHtmlElement` generates an HTML element based on the current URL and provided
+ * content.
+ * @param htmlContent - The `htmlContent` parameter in the `makeHtmlElement` function represents the
+ * content that you want to include inside the HTML element that will be generated. This content can be
+ * any valid HTML code such as text, images, links, or other elements like divs, spans, etc. The
+ * function
+ * @returns The function `makeHtmlElement` returns an HTML element based on the conditions specified in
+ * the function. The returned HTML element will vary depending on the URL of the current window
+ * location. If the URL includes "banner", the function will return the `htmlContent` directly. If the
+ * URL includes "news", the function will select the element with the id "newsLetter" and set its inner
+ * HTML to
+ */
+function makeHtmlElement(htmlContent) {
     let htmlElement;
     let originCss = getStyleTemplate();
     if (window.location.href.includes(`banner`)) {
@@ -1466,22 +1551,15 @@ function makeHtmlElement(htmlContent, css) {
     return htmlElement;
 }
 
-function getCss(element) {
-    let css = `${element.tagName.toLowerCase()} {`;
-    let defaultElement = document.createElement(element.tagName);
-    let computedStyles = window.getComputedStyle(element);
-    let defaultStyles = window.getComputedStyle(defaultElement);
-    for (let i = 0; i < computedStyles.length; i++) {
-        let property = computedStyles[i];
-        let value = computedStyles.getPropertyValue(property);
-        let defaultValue = defaultStyles.getPropertyValue(property);
-        if (value != defaultValue)
-            css += `${property}: ${value};`;
-    }
-    css += `}\n`;
-    return css;
-}
 
+/**
+ * The function `saveOnPage` saves the HTML content of a specific element based on the current page URL
+ * and updates the user and current user data in local storage.
+ * @param event - The `event` parameter in the `saveOnPage` function is an event object that represents
+ * an event being handled by the function. In this case, the function is designed to be called when a
+ * form submission event occurs, and the `event` parameter is used to prevent the default behavior of
+ * the
+ */
 function saveOnPage(event) {
     event.preventDefault();
     let element;
@@ -1513,6 +1591,11 @@ function saveOnPage(event) {
     localStorage.setItem(`users`, JSON.stringify(users));
     localStorage.setItem(`currentUser`, JSON.stringify(currentUser));
 }
+
+/**
+ * The function `updateElement` retrieves user-specific HTML elements from local storage and updates
+ * corresponding elements on different pages based on the current URL.
+ */
 function updateElement() {
     let element;
     let storedElement;
@@ -1536,6 +1619,10 @@ function updateElement() {
             element.outerHTML = storedElement;
     }
 }
+
+/**
+ * The function `setBannerStyle` sets specific default CSS styles for a banner element and its children.
+ */
 function setBannerStyle() {
     let banner = document.querySelector(`#banner`);
     banner.style.position = `relative`;
