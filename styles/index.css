@@ -1,0 +1,39 @@
+@import url(../styles/reset.css);
+@import url(../styles/vars.css);
+
+body {
+    height: 100vh;
+    font-family: var(--open-sans);
+    font-size: calc(var(--fSize) - 8px);
+}
+
+button {
+    font-size: var(--fSize);
+    margin-block: 8px
+}
+
+h1 {
+    text-align: center;
+    height: max-content;
+    position: relative;
+    place-self: center;
+}
+
+.grid {
+    display: grid;
+}
+
+#container {
+    width: max-content;
+    height: max-content;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#registration {
+    display: none;
+}
+
+form input {
+    height: var(--fSize);
+}

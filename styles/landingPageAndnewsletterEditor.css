@@ -1,0 +1,93 @@
+@import url(./reset.css);
+@import url(./vars.css);
+@import url(../styles/header.css);
+body {
+    font-family: var(--open-sans);
+}
+
+.grid {
+    display: grid;
+}
+
+#main {
+    grid-template-columns: 1fr 3fr;
+}
+
+.editable:hover {
+    cursor: pointer;
+}
+
+#tools>* {
+    margin-bottom: 8px;
+    height: max-content;
+}
+
+#tools {
+    height: 100%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#sticky-container {
+    position: sticky;
+    top: 0;
+}
+
+#clrs {
+    max-width: 50%;
+    grid-column: span 2;
+    margin-inline: auto;
+}
+
+#tools form {
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+}
+
+#tools label {
+    width: max-content;
+}
+
+#tools input {
+    width: 100%;
+}
+
+#txtTool span {
+    grid-column: span 2;
+    width: max-content;
+    margin-inline: auto;
+}
+
+option img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1023px) {
+
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    #main {
+        grid-template-areas: "1 2";
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    #tools {
+        grid-area: 2;
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 40vh;
+        width: 100%;
+    }
+
+    #wrapper {
+        height: 50vh;
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 100%;
+    }
+}

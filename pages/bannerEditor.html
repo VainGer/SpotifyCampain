@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Editor</title>
+    <script type="module" src="../scripts/index.js"></script>
+    <link rel="stylesheet" href="../styles/bannerEditor.css">
+</head>
+
+<body dir="rtl">
+    <header></header>
+    <section id="main" class="grid">
+        <section id="tools">
+            <h3>גודל הבאנר</h3>
+            <form id="container-size-form" class="grid">
+                <input type="radio" name="container-size" value="250px-250px">250PX x 250PX</input>
+                <input type="radio" name="container-size" value="120px-600px">120PX x 600PX</input>
+                <input type="radio" name="container-size" value="600px-120px">600PX x 120PX</input>
+            </form>
+            <h3>עורך טקסט</h3>
+            <form id="text-editor" class="grid text-editors">
+                <h3 id="text-name">שם התוכן</h3>
+                <label for="text-content">תוכן הטקסט</label>
+                <input type="text" id="text-content">
+                <label for="font-family">פונט</label>
+                <select name="font-family" id="font-family"></select>
+                <label for="font-size">גודל הפונט</label>
+                <select name="font-size" id="font-size"></select>
+                <label for="text-hor-pos">מיקום הוריזונטלי</label>
+                <input type="range" id="text-hor-pos" min="0" max="100">
+                <label for="text-ver-pos">מיקום ורטיקלי</label>
+                <input type="range" id="text-ver-pos" min="0" max="100">
+                <label for="text-box-width-size">רוחב הפסקה</label>
+                <input type="range" id="text-box-width-size" min="0" max="100">
+                <label for="fontClr">צבע טקסט</label>
+                <input type="color" id="fontClr">
+                <label for="fontBgClr">צבע רקע הטקסט</label>
+                <input type="color" id="fontBgClr">
+            </form>
+            <form class="grid" id="customFont-form">
+                <label for="addCustomFont">הלעת קובץ פונט</label>
+                <input type="file" id="addCustomFont">
+            </form>
+            <button id="add-text-field">הוספת פסקה</button>
+            <h3>הגדרות רקע</h3>
+            <form id="background-editor" class="grid">
+                <label for="bgClr">צבע רקע</label>
+                <input type="color" id="bgClr">
+                <label for="bgImgFile">הלעת תמונת רקע מקובץ</label>
+                <input type="file" id="bgImgFile">
+                <label for="bgImgLink">קישור לתמונת רקע</label>
+                <input type="text" id="bgImgLink">
+                <button id="addBgImgFromLink" class="spanBtn">הלעת תמונת רקע מקישור</button>
+                <label for="bg-ver-pos">מיקום ורטיקלי של הרקע</label>
+                <input type="range" id="bg-ver-pos" min="0" max="100">
+                <label for="bg-hor-pos">מיקום הוריזונטלי של הרקע</label>
+                <input type="range" id="bg-hor-pos" min="0" max="100">
+                <label for="bgSize">גודל הרקע</label>
+                <input type="range" id="bgSize">
+                <button id="removeBgImage" class="spanBtn">הסר תמונת רקע</button>
+            </form>
+            <h3>תמונות</h3>
+            <form id="images" class="grid">
+                <label for="addImgFile">הלעת תמונה מקובץ</label>
+                <input type="file" id="addImgFile">
+                <label for="ImgLink">קישור לתמונה</label>
+                <input type="text" id="ImgLink">
+                <button id="addImgFromLink" class="spanBtn">הוסף תמונה מקישור</button>
+                <label for="img-ver-pos">מיקום ורטיקלי</label>
+                <input type="range" id="img-ver-pos" min="0" max="100">
+                <label for="img-hor-pos">מיקום הוריזונטלי</label>
+                <input type="range" id="img-hor-pos" min="0" max="100">
+                <label for="imgSize">גודל התמונה</label>
+                <input type="range" id="imgSize">
+                <button id="removeImg" class="spanBtn">הסר תמונה</button>
+            </form>
+            <button id="addNewImg">הוסף עוד תמונה</button>
+        </section>
+        <div id="banner-container">
+            <section id="banner">
+                <p id="text-box"></p>
+                <img id="img">
+            </section>
+        </div>
+    </section>
+    <section id="saver">
+        <button id="saveOnPage">שמור באנר בעמוד</button>
+        <button id="resetToDefaults">חזרה לברירת מחדל</button>
+        <button id="downloadAsCode">הורד באנר כעמוד HTML</button>
+    </section>
+</body>
+
+</html>

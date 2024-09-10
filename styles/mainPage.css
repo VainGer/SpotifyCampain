@@ -1,0 +1,26 @@
+@import url(../styles/reset.css);
+@import url(../styles/header.css);
+@import url(../styles/vars.css);
+
+body {
+    font-family: var(--open-sans);
+    font-size: var(--fSize2);
+    color: white;
+}
+
+.grid {
+    display: grid;
+}
+
+#campaign{
+    max-width: 100%;
+    background-color: black;
+    text-align: center;
+}
+#campaign img{
+    width: 100%;
+    
+}
+#campaign>*{
+    margin-bottom: 16px;
+}

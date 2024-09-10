@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עורך עמוד נחיתה</title>
+    <link rel="stylesheet" href="../styles/landingPageAndnewsletterEditor.css">
+    <script type="module" src="../scripts/index.js"></script>
+</head>
+
+<body dir="rtl">
+    <header></header>
+    <section id="main" class="grid">
+        <section id="tools">
+            <div id="sticky-container">
+                <h3>בחר תבנית</h3>
+                <form id="chooseTemplate">
+                    <button id="template1">תבנית עם טבלת השוואות</button>
+                    <button id="template2">תבנית עם תמונות ופסקאות</button>
+                </form>
+                <h3>עורך צבעים</h3>
+                <form id="clrTool" class="grid">
+                    <label for="chooseElement-clr">בחר אלמנט</label>
+                    <select name="chooseElement-clr" id="chooseElement-clr">
+                        <option value="#landingPage">צבע עמוד</option>
+                        <option value="#callToAction">צבע רקע הנעה לפעולה</option>
+                        <option value="table" class="template1Item">צבע רקע טבלה</option>
+                        <option value="#whyToChoose">צבע רקע פסקה נוספת</option>
+                        <option value="#contact">צבע רקע ליצירת קשר</option>
+                        <option value="#newsletterSubscription">צבע רקע להרשמה לניוזלטר</option>
+                        <option value=".btns">צבע רקע כפתורים</option>
+                        <option value="#imageAndP" class="template2Item">צבע רקע תמונות עם פסקאות</option>
+                    </select>
+                    <input type="color" id="clrs">
+                </form>
+                <h3>עורך תמונות</h3>
+                <form id="imgTool" class="grid">
+                    <label for="chooseElement-img">בחר אלמנט לתמונה</label>
+                    <select name="chooseElement-img" id="chooseElement-img">
+                        <option value="#logo">לוגו</option>
+                        <option value="#hero">הירו</option>
+                        <option value="#timer img">תמונה מתחת לטקסט</option>
+                        <option value="#whyToImg">תמונת צד</option>
+                        <option value="#imgp1" class="template2Item">תמונה 1 מתחת לפסקה</option>
+                        <option value="#imgp2" class="template2Item">תמונה 2 מתחת לפסקה</option>
+                        <option value="#imgp3" class="template2Item">תמונה 3 מתחת לפסקה</option>
+                    </select>
+                    <label for="addImgFile">הוסף קובץ</label>
+                    <input type="file" id="addImgFile">
+                    <label for="addImgLink">הוסף קישור</label>
+                    <input type="text" id="addImgLink">
+                </form>
+                <h3>עורך טקסט</h3>
+                <form id="txtTool" class="grid">
+                    <span>לחץ על האלמנט לשינוי התוכן</span>
+                    <label for="txtContent">הזן תוכן</label>
+                    <input type="text" id="txtContent">
+                    <label for="font-size">גודל הפונט</label>
+                    <select name="font-size" id="font-size"></select>
+                    <label for="font-family">סוג פונט</label>
+                    <select name="font-size" id="font-family"></select>
+                    <label for="txtClr">צבע טקסט</label>
+                    <input type="color" id="txtClr">
+                </form>
+                <h3 class="template1Item">עורך אייקונים בטבלה</h3>
+                <form id="tblTool" class="grid" class="template1Item">
+                    <label for="icon" class="template1Item">אייקון</label>
+                    <select name="icon" id="icon" class="template1Item">
+                        <option value="../assets/icons/V.png">V</option>
+                        <option value="../assets/icons/X.png">X</option>
+                    </select>
+                </form>
+                <h3>שמירת או חזרה לברירת מחדל</h3>
+                <form id="saver" class="grid">
+                    <button id="save">שמור דף נחיתה</button>
+                    <button id="resetToDefaults">חזרה להגדרות ברירת מחדל</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>

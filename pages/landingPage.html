@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../styles/landingPage.css">
+    <script type="module" src="../scripts/index.js"></script>
+</head>
+
+<body dir="rtl">
+    <header></header>
+    <section id="hero" class="grid">
+        <div id="callToAction" class="grid">
+            <h3>מנוי פרימיום <br> רק ב1.99$ לשישה חודשים</h3>
+            <p>תהינו ממוזיקה ללא פרסומות,
+                <br>שמיעת מוזיקה אופליין
+                והצעות מוזיקה חדשות<br>
+                תמהרו להירשם המבצע תקף<br>
+                עד ה1.10.24
+            </p>
+            <span>לסטודנטים עוד חודש מתנה</span>
+            <button class="btns" id="forMoreBtn">לפרטים נוספים</button>
+        </div>
+        <img id="logo" src="../assets/images/logo.png" alt="">
+    </section>
+    <h3 id="timerH3">המבצע תקף עוד</h3>
+    <section id="timer">
+        <img src="../assets/images/screen_img.png" alt="">
+        <h3 id="timerValue" dir="ltr"></h3>
+    </section>
+    <h3>מנויים שונים</h3>
+    <section id="plans">
+        <table>
+            <tr>
+                <th>תכונה</th>
+                <th>חינם</th>
+                <th>פרימיום</th>
+            </tr>
+            <tr>
+                <td>שמיעה ללא פרסומות</td>
+                <td class="imgTd"><img src="../assets/icons/X.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>מצב אופליין</td>
+                <td class="imgTd"><img src="../assets/icons/X.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>העברת שירים ללא מגבלות</td>
+                <td class="imgTd"><img src="../assets/icons/X.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>סאונד באיכות גבוהה</td>
+                <td class="imgTd"><img src="../assets/icons/X.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>מעבר קל בין פלטפורמות</td>
+                <td class="imgTd"><img src="../assets/icons/X.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>הצעות חדשות על בסיס דברים שאהבת </td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+                <td class="imgTd"><img src="../assets/icons/V.png" alt=""></td>
+            </tr>
+        </table>
+    </section>
+    <h3>למה לבחור Spotify Premium?</h3>
+    <section id="whyToChoose" class="grid">
+        <div class="grid" id="p-and-h">
+            <h4>תשנו את חויית שמיעת המוזיקה שלכם עם Spotify עם פתיחת שנת הלימודים</h4>
+            <p>,תקשיבו למוזיקה הכי טובה ומתאימה לכם איתנו <br>
+                אנחנו מחפשים עבורכם את המוזיקה הכי טובה ומתאימה כדי לשפר <br>
+                את חויית המוזיקה שלכם ובנוסף הפודקאסטים הכי טובים! <br>
+                ללא פרסומות, באיכות גבוהה וללא תלות ברשת האינטרנט.</p>
+        </div>
+        <div id="whyToImg">
+            <img src="../assets/images/aside_image.png" alt="">
+        </div>
+    </section>
+    <h3>לשאלות נוספות אנחנו כאן בלחיצת כפתור</h3>
+    <section id="contact">
+        <form class="grid">
+            <label for="content">תשאירו לנו הודעה ואנחנו נחזור אליכם</label>
+            <textarea name="content" id="content"></textarea>
+            <label for="emailToAnswer">כתובת הדואר האלקטרוני שלכם</label>
+            <input type="email" id="emailToAnswer">
+            <button type="submit" class="btns" id="leaveMsg">להשאיר הודעה</button>
+        </form>
+    </section>
+    <h3>תשארו מעודכנים ותרשמו לניוזלטר שלנו</h3>
+    <section id="newsletterSubscription">
+        <form class="grid">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <button type="submit" class="btns" id="subscribe">להרשמה</button>
+        </form>
+    </section>
+</body>
+
+</html>

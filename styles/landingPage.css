@@ -1,0 +1,323 @@
+@import url(./reset.css);
+@import url(./vars.css);
+@import url(../styles/header.css);
+
+body {
+    background-color: black;
+    font-size: var(--fSize);
+    font-family: var(--open-sans);
+    width: 100%;
+}
+
+header {
+    font-size: 1.2rem;
+}
+
+body>* {
+    color: white;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+}
+
+table,
+tr,
+td,
+th {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+section {
+    margin-block: 32px;
+}
+
+h3 {
+    width: max-content;
+    margin-inline: auto;
+}
+
+#logo {
+    position: relative;
+    width: 30%;
+    right: 55%;
+    top: 3%;
+}
+
+#hero {
+    margin-top: 0;
+    grid-template-columns: 2fr 1fr;
+    background-image: url(../assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+#callToAction {
+    width: max-content;
+    height: max-content;
+    background-color: var(--grey);
+    margin: auto;
+    text-align: center;
+}
+
+#callToAction>* {
+    padding: 8px;
+    margin: auto;
+}
+
+#callToAction button {
+    margin-bottom: 12px;
+}
+
+.btns {
+    background-color: var(--green);
+    border-radius: 20px;
+    margin-inline: auto;
+    margin-bottom: 16px;
+    border: none;
+    height: max-content;
+    font-size: var(--fSize);
+    border: 1px solid;
+    width: max-content;
+    padding: 6px;
+}
+
+.btns:hover {
+    border: 1px solid white;
+}
+
+#plans {
+    background-color: var(--grey);
+    width: 70%;
+    margin-inline: auto;
+}
+
+#plans table {
+    margin-inline: auto;
+    width: 100%;
+}
+
+#plans td {
+    padding-inline: 8px;
+}
+
+#plans img {
+    width: 25px;
+}
+
+.imgTd {
+    text-align: center;
+}
+
+#whyToChoose {
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--grey);
+    height: max-content;
+}
+
+#whyToChoose h4,
+#whyToChoose p {
+    padding: 16px;
+}
+
+#p-and-h {
+    grid-template-rows: 1fr 4fr;
+}
+
+#whyToImg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/aside_image.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 60%;
+}
+
+#whyToImg img {
+    display: none;
+}
+
+#contact {
+    background-color: var(--grey);
+}
+
+#contact form label {
+    width: max-content;
+    margin-inline: auto;
+}
+
+#contact form>* {
+    margin-block: 4px;
+}
+
+#content {
+    width: 35%;
+    margin-inline: auto;
+    height: 120px;
+}
+
+#emailToAnswer {
+    width: 35%;
+    margin-inline: auto;
+    height: 45px;
+}
+
+#newsletterSubscription form>* {
+    margin-block: 4px;
+}
+
+#newsletterSubscription {
+    background-color: var(--grey);
+    text-align: center;
+}
+
+#newsletterSubscription input {
+    width: 35%;
+    margin-inline: auto;
+    height: 45px;
+}
+
+#timer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#timer img {
+    width: 100%;
+    height: auto;
+}
+
+#timerValue {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#pop-up {
+    position: fixed;
+    background-color: var(--no-transparent-grey);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: max-content;
+    width: 50%;
+    border: 1px solid white;
+}
+
+#pop-up>* {
+    margin-block: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    #hero {
+        height: max-content;
+    }
+
+    #callToAction {
+        height: max-content;
+        margin: 0;
+    }
+
+}
+
+@media(max-width:767px) {
+    body {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    body>* {
+        padding: 4px;
+    }
+
+    #hero {
+        grid-template-areas: "1 2";
+        grid-template-columns: 1fr 1fr;
+        height: 70vh;
+    }
+
+    #logo {
+        grid-area: 1;
+        grid-column: span 2;
+        position: static;
+        width: 80px;
+        margin-inline: auto;
+        height: max-content;
+    }
+
+    #callToAction {
+        grid-area: 2;
+        padding: 0;
+        margin: 0 auto;
+        grid-column: span 2;
+    }
+
+    #timerValue {
+        top: 30%;
+    }
+
+    #plans {
+        width: 100%;
+    }
+
+    #whyToChoose {
+        background-image: none;
+        height: max-content;
+    }
+
+    #p-and-h {
+        text-align: center;
+        grid-column: span 2;
+    }
+
+    #p-and-h p {
+        margin-top: 16px;
+    }
+
+    #whyToImg {
+        grid-column: span 2;
+        background-image: none;
+    }
+
+    #whyToImg img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #content {
+        width: 60%;
+        margin-inline: auto;
+        height: 120px;
+    }
+
+    #emailToAnswer {
+        width: 60%;
+        margin-inline: auto;
+        height: 30px;
+    }
+
+    #newsletterSubscription form>* {
+        margin-block: 4px;
+    }
+
+    #newsletterSubscription {
+        background-color: var(--grey);
+    }
+
+    #newsletterSubscription input {
+        width: 60%;
+        margin-inline: auto;
+        height: 30px;
+    }
+}

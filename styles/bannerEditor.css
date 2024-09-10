@@ -1,0 +1,102 @@
+@import url(./reset.css);
+@import url(./header.css);
+@import url(./vars.css);
+
+body {
+    font-family: var(--open-sans);
+    max-width: 100%;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+}
+
+#main {
+    grid-template-columns: 1fr 2fr;
+    height: 85vh;
+    top: 5vh;
+    position: relative;
+}
+
+#tools {
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+#tools>* {
+    width: 100%;
+    margin-inline: auto;
+}
+
+#tools form {
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid black;
+}
+
+#tools form label {
+    width: max-content;
+    padding: 6px;
+}
+
+#tools form input {
+    width: 100%;
+    padding: 2px;
+}
+
+#saver {
+    width: max-content;
+    margin: 48px auto;
+}
+
+
+
+#tools h3 {
+    grid-column: span 2;
+    width: max-content;
+    margin: 6px auto;
+}
+
+.spanBtn {
+    grid-column: span 2;
+}
+
+#banner-container {
+    position: relative;
+    place-self: center;
+}
+
+@media (max-width: 1023px) {
+    #main {
+        grid-template-areas: "1 2";
+        grid-template-columns: 1fr;
+        height: 80vh;
+        width: 100%;
+    }
+
+    #banner-container {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: auto;
+        grid-area: 1;
+        grid-column: span 2;
+        border: 2px solid black;
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    #tools {
+        margin-top: 16px;
+        position: relative;
+        height: 100%;
+        place-self: bottom;
+        width: 100%;
+    }
+    #tools form{
+        text-align: center;
+    }
+    #saver {
+        padding-top: 16px;
+        width: 100%;
+    }
+}

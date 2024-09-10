@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'open-sans';
+    src: url(..//assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* colors */
+    --green: rgba(30, 215, 96, 1);
+    --grey: rgba(46, 50, 48, 0.801);
+    --no-transparent-grey: rgb(46, 50, 48);
+    --blue: rgba(30, 17, 84, 1);
+    /* font-size */
+    --fSize: calc(1em + 1vw);
+    --fSize2: calc(1em + 1vw - 8px);
+    --fSizeNews: 18px;
+    --btnFSize: 1em;
+    /* fonts */
+    --open-sans: 'open-sans';
+}

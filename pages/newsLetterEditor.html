@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Editor</title>
+    <link rel="stylesheet" href="../styles/landingPageAndnewsletterEditor.css">
+    <script type="module" src="../scripts/index.js"></script>
+</head>
+
+<body dir="rtl">
+    <header></header>
+    <section id="main" class="grid">
+        <section id="tools">
+            <div id="sticky-container">
+                <h3>עורך צבעים</h3>
+                <form id="clrTool" class="grid">
+                    <label for="chooseElement-clr">בחר אלמנט</label>
+                    <select name="chooseElement-clr" id="chooseElement-clr">
+                        <option value="#newsLetter">צבע רקע</option>
+                        <option value=".btns">צבע רקע כפתורים</option>
+                    </select>
+                    <input type="color" id="clrs">
+                </form>
+                <h3>עורך תמונות</h3>
+                <form id="imgTool" class="grid">
+                    <label for="chooseElement-img">בחר אלמנט לתמונה</label>
+                    <select name="chooseElement-img" id="chooseElement-img">
+                        <option value="#logo">לוגו</option>
+                        <option value="#heroImg">הירו</option>
+                    </select>
+                    <label for="addImgFile">הוסף קובץ</label>
+                    <input type="file" id="addImgFile">
+                    <label for="addImgLink">הוסף קישור</label>
+                    <input type="text" id="addImgLink">
+                </form>
+                <h3>עורך טקסט</h3>
+                <form id="txtTool" class="grid">
+                    <span>לחץ על האלמנט לשינוי התוכן</span>
+                    <label for="txtContent">הזן תוכן</label>
+                    <input type="text" id="txtContent">
+                    <label for="font-size">גודל הפונט</label>
+                    <select name="font-size" id="font-size"></select>
+                    <label for="font-family">סוג פונט</label>
+                    <select name="font-size" id="font-family"></select>
+                    <label for="txtClr">צבע טקסט</label>
+                    <input type="color" id="txtClr">
+                </form>
+                <h3>שמירת או חזרה לברירת מחדל</h3>
+                <form id="saver" class="grid">
+                    <button id="save">שמור דף נחיתה</button>
+                    <button id="resetToDefaults">חזרה להגדרות ברירת מחדל</button>
+                </form>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
