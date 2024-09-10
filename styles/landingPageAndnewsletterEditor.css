@@ -58,7 +58,11 @@ header {
     grid-column: span 2;
     margin-inline: auto;
 }
-
+#tools h3{
+    color: white;
+    width: max-content;
+    margin-inline: auto;
+}
 #tools form {
     grid-template-columns: 1fr 1fr;
     border: 1px solid black;
