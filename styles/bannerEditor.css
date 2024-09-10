@@ -21,7 +21,8 @@ body {
 
 #tools {
     overflow-y: auto;
-    border: 1px solid black;
+    background-color: black;
+    color: white;
 }
 
 #tools>* {
@@ -31,7 +32,7 @@ body {
 
 #tools form {
     grid-template-columns: 1fr 3fr;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 #tools form label {
@@ -44,12 +45,29 @@ body {
     padding: 2px;
 }
 
+#tools button {
+    height: 30px;
+    background-color: var(--no-transparent-grey);
+    color: white;
+    border-radius: 20px;
+    padding-inline: 8px;
+}
+
 #saver {
     width: max-content;
     margin: 48px auto;
+    text-align: center;
 }
 
-
+#saver button {
+    height: 30px;
+    background-color: var(--no-transparent-grey);
+    color: white;
+    border-radius: 20px;
+    padding-inline: 8px;
+    width: max-content;
+    margin-inline: auto;
+}
 
 #tools h3 {
     grid-column: span 2;
@@ -92,9 +110,11 @@ body {
         place-self: bottom;
         width: 100%;
     }
-    #tools form{
+
+    #tools form {
         text-align: center;
     }
+
     #saver {
         padding-top: 16px;
         width: 100%;

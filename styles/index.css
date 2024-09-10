@@ -5,11 +5,14 @@ body {
     height: 100vh;
     font-family: var(--open-sans);
     font-size: calc(var(--fSize) - 8px);
+    background-color: black;
+    color: white;
 }
 
 button {
     font-size: var(--fSize);
-    margin-block: 8px
+    margin-block: 8px;
+    border-radius: 20px;
 }
 
 h1 {
@@ -24,16 +27,29 @@ h1 {
 }
 
 #container {
-    width: max-content;
-    height: max-content;
+    width: 60%;
+    height: 70%;
     margin-inline: auto;
     text-align: center;
+    background-color: var(--grey);
 }
 
 #registration {
     display: none;
 }
 
+form {
+    padding-top: 50px;
+    width: max-content;
+    margin-inline: auto;
+}
+
 form input {
     height: var(--fSize);
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
